@@ -1,0 +1,1 @@
+﻿SELECT * FROM [student_management].[dbo].[student]
