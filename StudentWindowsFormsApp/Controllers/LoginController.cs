@@ -13,7 +13,7 @@ namespace StudentWindowsFormsApp.Controllers
         {
             using (SqlConnection connection = DatabaseManager.GetConnection())
             {
-                SqlCommand command = new SqlCommand("SELECT * FROM [student_management].[dbo].[login] WHERE email = @Email AND password = @Password", connection);
+                SqlCommand command = new SqlCommand("SELECT * FROM [student_management].[dbo].[user] WHERE email = @Email AND password = @Password", connection);
                 command.Parameters.AddWithValue("@Email", email);
                 command.Parameters.AddWithValue("@Password", password);
 

@@ -1,4 +1,5 @@
 ﻿using StudentWindowsFormsApp.Views;
+using StudentWindowsFormsApp.Views.Class;
 using StudentWindowsFormsApp.Views.Faculty;
 using StudentWindowsFormsApp.Views.Scores;
 using System;
@@ -19,7 +20,7 @@ namespace StudentWindowsFormsApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FacultyForm());
+            Application.Run(new ClassForm());
         }
     }
 }
