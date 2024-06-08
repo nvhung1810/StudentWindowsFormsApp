@@ -37,5 +37,10 @@ namespace StudentWindowsFormsApp
                 MessageBox.Show("Invalid email or password.");
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -14,8 +14,8 @@ namespace StudentWindowsFormsApp.Models
         public string Gender { get; set; }
         public string Address { get; set; }
         public string Class {  get; set; }
-        public int MathScores { get; set; }
-        public int EnglishScores { get; set; }
+        public int Gpa { get; set; }
+        public int Phone { get; set; }
         public string Email { get; set; }
     }
 }

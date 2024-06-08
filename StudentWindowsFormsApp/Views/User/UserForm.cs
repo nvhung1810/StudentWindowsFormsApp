@@ -84,5 +84,17 @@ namespace StudentWindowsFormsApp.Views
             StudentsForm studentsForm = new StudentsForm(); 
             studentsForm.ShowDialog();
         }
+
+        private void buttonNavigateStudent_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            StudentsForm studentsForm = new StudentsForm();
+            studentsForm.ShowDialog();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

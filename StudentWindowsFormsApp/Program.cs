@@ -1,4 +1,5 @@
 ﻿using StudentWindowsFormsApp.Views;
+using StudentWindowsFormsApp.Views.Scores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace StudentWindowsFormsApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StudentsForm());
+            Application.Run(new ScoresForm());
         }
     }
 }
