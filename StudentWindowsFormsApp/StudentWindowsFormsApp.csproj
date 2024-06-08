@@ -71,7 +71,7 @@
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DatabaseManager.cs" />
-    <Compile Include="Models\Faculty.cs" />
+    <Compile Include="Models\FacultyModel.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Views\Auth\LoginForm.cs">

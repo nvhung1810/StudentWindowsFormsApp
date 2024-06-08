@@ -24,7 +24,7 @@ namespace StudentWindowsFormsApp.Controllers
                     {
                         Student student = new Student
                         {
-                            Id = reader.GetInt32(0),
+                            IdStudent = reader.GetInt32(0),
                             FullName = reader.IsDBNull(1) ? "-" : reader.GetString(1),
                             DateOfBirth = reader.IsDBNull(2) ? "-" : reader.GetString(2),
                             Gender = reader.IsDBNull(3) ? "-" : reader.GetString(3),
@@ -86,10 +86,10 @@ namespace StudentWindowsFormsApp.Controllers
             {
                 try
                 {
-                    string sqlString = "DELETE FROM [student_management].[dbo].[students] WHERE ID = @ID";
+                    string sqlString = "DELETE FROM [student_management].[dbo].[students] WHERE id_student = @IdStudent";
 
                     SqlCommand sqlCommand = new SqlCommand(sqlString, conn);
-                    sqlCommand.Parameters.AddWithValue("@Id", id);
+                    sqlCommand.Parameters.AddWithValue("@IdStudent", id);
                     await sqlCommand.ExecuteNonQueryAsync();
 
                     return true;
@@ -118,7 +118,7 @@ namespace StudentWindowsFormsApp.Controllers
                             gpa = @Gpa,
                             phone = @Phone,
                             email = @Email
-                        WHERE id = @Id";
+                        WHERE id_student = @IdStudent";
 
                     SqlCommand sqlCommand = new SqlCommand(sqlString, connection);
 
@@ -130,7 +130,7 @@ namespace StudentWindowsFormsApp.Controllers
                     sqlCommand.Parameters.AddWithValue("@Gpa", student.Gpa);
                     sqlCommand.Parameters.AddWithValue("@Phone", student.Phone);
                     sqlCommand.Parameters.AddWithValue("@Email", student.Email);
-                    sqlCommand.Parameters.AddWithValue("@Id", student.Id);
+                    sqlCommand.Parameters.AddWithValue("@IdStudent", student.IdStudent);
 
                     await sqlCommand.ExecuteNonQueryAsync();
                     return true;
@@ -162,7 +162,7 @@ namespace StudentWindowsFormsApp.Controllers
                     {
                         Student student = new Student
                         {
-                            Id = reader.GetInt32(0),
+                            IdStudent = reader.GetInt32(0),
                             FullName = reader.IsDBNull(1) ? "-" : reader.GetString(1),
                             DateOfBirth = reader.IsDBNull(2) ? "-" : reader.GetString(2),
                             Gender = reader.IsDBNull(3) ? "-" : reader.GetString(3),

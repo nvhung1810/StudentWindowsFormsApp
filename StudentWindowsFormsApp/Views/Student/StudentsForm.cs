@@ -85,7 +85,7 @@ namespace StudentWindowsFormsApp.Views
         private async void buttonDeleteStudent_Click(object sender, EventArgs e)
         {
             DataGridViewRow selectedRow = dataGridViewStudent.SelectedRows[0];
-            string id = selectedRow.Cells["Id"].Value.ToString();
+            string id = selectedRow.Cells["IdStudent"].Value.ToString();
 
             bool res = await studentController.DeleteStudentAsync(int.Parse(id));
 
@@ -105,12 +105,12 @@ namespace StudentWindowsFormsApp.Views
         private async void buttonUpdateStudent_Click(object sender, EventArgs e)
         {
             DataGridViewRow selectedRow = dataGridViewStudent.SelectedRows[0];
-            string id = selectedRow.Cells["Id"].Value.ToString();
+            string id = selectedRow.Cells["IdStudent"].Value.ToString();
 
 
             Student student = new Student
             {
-                Id = int.Parse(id),
+                IdStudent = int.Parse(id),
                 FullName = textBoxFullName.Text,
                 DateOfBirth = dateTimePickerDateOfBirth.Value.ToString("yyyy-MM-dd"),
                 Gender = textBoxGender.Text,

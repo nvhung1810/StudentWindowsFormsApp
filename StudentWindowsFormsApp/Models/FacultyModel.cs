@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace StudentWindowsFormsApp.Models
 {
-    internal class Faculty
+    internal class FacultyModel
     {
-        public int Id { get; set; }
+        public int IdFaculty { get; set; }
         public string Name { get; set; }
-        public int Phone { get; set; }
+        public string Phone { get; set; }
         public string Address { get; set; }
     }
 }

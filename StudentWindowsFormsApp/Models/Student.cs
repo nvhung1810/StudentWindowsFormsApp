@@ -8,7 +8,7 @@ namespace StudentWindowsFormsApp.Models
 {
     internal class Student
     {
-        public int Id { get; set; }
+        public int IdStudent { get; set; }
         public string FullName { get; set; }
         public string DateOfBirth { get; set; }
         public string Gender { get; set; }
