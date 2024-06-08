@@ -29,22 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScoresForm));
-            this.buttonSearchStudent = new System.Windows.Forms.Button();
-            this.textBoxSearchStudent = new System.Windows.Forms.TextBox();
-            this.buttonUpdateStudent = new System.Windows.Forms.Button();
-            this.buttonDeleteStudent = new System.Windows.Forms.Button();
-            this.buttonSaveStudent = new System.Windows.Forms.Button();
-            this.textBoxEnglishBox = new System.Windows.Forms.TextBox();
+            this.buttonUpdate = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.textBoxImage = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBoxMathScores = new System.Windows.Forms.TextBox();
+            this.textBoxEnglish = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBoxClass = new System.Windows.Forms.TextBox();
+            this.textBoxLaw = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBoxAddress = new System.Windows.Forms.TextBox();
+            this.textBoxNetTechnology = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxPhysics = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBoxGender = new System.Windows.Forms.TextBox();
+            this.textBoxBasicTechnology = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -54,188 +52,170 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.dataGridViewStudent = new System.Windows.Forms.DataGridView();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBoxStudent = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxMath = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // buttonSearchStudent
+            // buttonUpdate
             // 
-            this.buttonSearchStudent.BackColor = System.Drawing.Color.OldLace;
-            this.buttonSearchStudent.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSearchStudent.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonSearchStudent.Image = ((System.Drawing.Image)(resources.GetObject("buttonSearchStudent.Image")));
-            this.buttonSearchStudent.Location = new System.Drawing.Point(336, 82);
-            this.buttonSearchStudent.Name = "buttonSearchStudent";
-            this.buttonSearchStudent.Size = new System.Drawing.Size(66, 25);
-            this.buttonSearchStudent.TabIndex = 47;
-            this.buttonSearchStudent.UseVisualStyleBackColor = false;
+            this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUpdate.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdate.Image")));
+            this.buttonUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonUpdate.Location = new System.Drawing.Point(203, 395);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(95, 27);
+            this.buttonUpdate.TabIndex = 44;
+            this.buttonUpdate.Text = "Cập Nhật";
+            this.buttonUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
-            // textBoxSearchStudent
+            // buttonDelete
             // 
-            this.textBoxSearchStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearchStudent.Location = new System.Drawing.Point(88, 83);
-            this.textBoxSearchStudent.MaxLength = 40000;
-            this.textBoxSearchStudent.Name = "textBoxSearchStudent";
-            this.textBoxSearchStudent.Size = new System.Drawing.Size(251, 22);
-            this.textBoxSearchStudent.TabIndex = 46;
+            this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.Image = ((System.Drawing.Image)(resources.GetObject("buttonDelete.Image")));
+            this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDelete.Location = new System.Drawing.Point(322, 395);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(65, 27);
+            this.buttonDelete.TabIndex = 43;
+            this.buttonDelete.Text = "Xóa";
+            this.buttonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
-            // buttonUpdateStudent
+            // buttonSave
             // 
-            this.buttonUpdateStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdateStudent.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateStudent.Image")));
-            this.buttonUpdateStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUpdateStudent.Location = new System.Drawing.Point(203, 395);
-            this.buttonUpdateStudent.Name = "buttonUpdateStudent";
-            this.buttonUpdateStudent.Size = new System.Drawing.Size(95, 27);
-            this.buttonUpdateStudent.TabIndex = 44;
-            this.buttonUpdateStudent.Text = "Cập Nhật";
-            this.buttonUpdateStudent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonUpdateStudent.UseVisualStyleBackColor = true;
+            this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSave.Image = ((System.Drawing.Image)(resources.GetObject("buttonSave.Image")));
+            this.buttonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSave.Location = new System.Drawing.Point(95, 395);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(87, 28);
+            this.buttonSave.TabIndex = 42;
+            this.buttonSave.Text = "    Tạo Mới";
+            this.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
-            // buttonDeleteStudent
+            // textBoxImage
             // 
-            this.buttonDeleteStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDeleteStudent.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteStudent.Image")));
-            this.buttonDeleteStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDeleteStudent.Location = new System.Drawing.Point(322, 395);
-            this.buttonDeleteStudent.Name = "buttonDeleteStudent";
-            this.buttonDeleteStudent.Size = new System.Drawing.Size(65, 27);
-            this.buttonDeleteStudent.TabIndex = 43;
-            this.buttonDeleteStudent.Text = "Xóa";
-            this.buttonDeleteStudent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonDeleteStudent.UseVisualStyleBackColor = true;
-            // 
-            // buttonSaveStudent
-            // 
-            this.buttonSaveStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSaveStudent.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveStudent.Image")));
-            this.buttonSaveStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSaveStudent.Location = new System.Drawing.Point(95, 395);
-            this.buttonSaveStudent.Name = "buttonSaveStudent";
-            this.buttonSaveStudent.Size = new System.Drawing.Size(87, 28);
-            this.buttonSaveStudent.TabIndex = 42;
-            this.buttonSaveStudent.Text = "    Tạo Mới";
-            this.buttonSaveStudent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSaveStudent.UseVisualStyleBackColor = true;
-            // 
-            // textBoxEnglishBox
-            // 
-            this.textBoxEnglishBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEnglishBox.Location = new System.Drawing.Point(203, 348);
-            this.textBoxEnglishBox.Margin = new System.Windows.Forms.Padding(0);
-            this.textBoxEnglishBox.Name = "textBoxEnglishBox";
-            this.textBoxEnglishBox.Size = new System.Drawing.Size(200, 22);
-            this.textBoxEnglishBox.TabIndex = 41;
+            this.textBoxImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxImage.Location = new System.Drawing.Point(203, 307);
+            this.textBoxImage.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxImage.Name = "textBoxImage";
+            this.textBoxImage.Size = new System.Drawing.Size(200, 22);
+            this.textBoxImage.TabIndex = 41;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(83, 355);
+            this.label8.Location = new System.Drawing.Point(83, 314);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 16);
             this.label8.TabIndex = 40;
             this.label8.Text = "Xử Lý Ảnh:";
             // 
-            // textBoxMathScores
+            // textBoxEnglish
             // 
-            this.textBoxMathScores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMathScores.Location = new System.Drawing.Point(203, 315);
-            this.textBoxMathScores.Margin = new System.Windows.Forms.Padding(0);
-            this.textBoxMathScores.Name = "textBoxMathScores";
-            this.textBoxMathScores.Size = new System.Drawing.Size(199, 22);
-            this.textBoxMathScores.TabIndex = 39;
+            this.textBoxEnglish.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEnglish.Location = new System.Drawing.Point(203, 274);
+            this.textBoxEnglish.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxEnglish.Name = "textBoxEnglish";
+            this.textBoxEnglish.Size = new System.Drawing.Size(199, 22);
+            this.textBoxEnglish.TabIndex = 39;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(82, 319);
+            this.label7.Location = new System.Drawing.Point(82, 278);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 16);
+            this.label7.Size = new System.Drawing.Size(71, 16);
             this.label7.TabIndex = 38;
-            this.label7.Text = "Công Nghệ Java:";
+            this.label7.Text = "Tiếng Anh:";
             // 
-            // textBoxClass
+            // textBoxLaw
             // 
-            this.textBoxClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxClass.Location = new System.Drawing.Point(203, 284);
-            this.textBoxClass.Margin = new System.Windows.Forms.Padding(0);
-            this.textBoxClass.Name = "textBoxClass";
-            this.textBoxClass.Size = new System.Drawing.Size(199, 22);
-            this.textBoxClass.TabIndex = 37;
+            this.textBoxLaw.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxLaw.Location = new System.Drawing.Point(203, 243);
+            this.textBoxLaw.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxLaw.Name = "textBoxLaw";
+            this.textBoxLaw.Size = new System.Drawing.Size(199, 22);
+            this.textBoxLaw.TabIndex = 37;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(82, 288);
+            this.label6.Location = new System.Drawing.Point(82, 247);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 16);
             this.label6.TabIndex = 36;
             this.label6.Text = "Pháp Luật:";
             // 
-            // textBoxAddress
+            // textBoxNetTechnology
             // 
-            this.textBoxAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAddress.Location = new System.Drawing.Point(203, 255);
-            this.textBoxAddress.Margin = new System.Windows.Forms.Padding(0);
-            this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(199, 22);
-            this.textBoxAddress.TabIndex = 35;
+            this.textBoxNetTechnology.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNetTechnology.Location = new System.Drawing.Point(203, 214);
+            this.textBoxNetTechnology.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxNetTechnology.Name = "textBoxNetTechnology";
+            this.textBoxNetTechnology.Size = new System.Drawing.Size(199, 22);
+            this.textBoxNetTechnology.TabIndex = 35;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(82, 258);
+            this.label5.Location = new System.Drawing.Point(82, 217);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 16);
             this.label5.TabIndex = 34;
             this.label5.Text = "Công Nghệ .Net:";
             // 
-            // textBoxEmail
+            // textBoxPhysics
             // 
-            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmail.Location = new System.Drawing.Point(203, 224);
-            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(0);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(198, 22);
-            this.textBoxEmail.TabIndex = 33;
+            this.textBoxPhysics.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPhysics.Location = new System.Drawing.Point(203, 183);
+            this.textBoxPhysics.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxPhysics.Name = "textBoxPhysics";
+            this.textBoxPhysics.Size = new System.Drawing.Size(198, 22);
+            this.textBoxPhysics.TabIndex = 33;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(81, 228);
+            this.label4.Location = new System.Drawing.Point(81, 187);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 16);
             this.label4.TabIndex = 32;
             this.label4.Text = "Vật Lý";
             // 
-            // textBoxGender
+            // textBoxBasicTechnology
             // 
-            this.textBoxGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxGender.Location = new System.Drawing.Point(203, 193);
-            this.textBoxGender.Margin = new System.Windows.Forms.Padding(0);
-            this.textBoxGender.Name = "textBoxGender";
-            this.textBoxGender.Size = new System.Drawing.Size(198, 22);
-            this.textBoxGender.TabIndex = 31;
+            this.textBoxBasicTechnology.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBasicTechnology.Location = new System.Drawing.Point(203, 152);
+            this.textBoxBasicTechnology.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxBasicTechnology.Name = "textBoxBasicTechnology";
+            this.textBoxBasicTechnology.Size = new System.Drawing.Size(198, 22);
+            this.textBoxBasicTechnology.TabIndex = 31;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(82, 169);
+            this.label2.Location = new System.Drawing.Point(82, 128);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 16);
@@ -246,7 +226,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(82, 135);
+            this.label1.Location = new System.Drawing.Point(82, 94);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 16);
@@ -307,7 +287,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(81, 196);
+            this.label3.Location = new System.Drawing.Point(81, 155);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 16);
@@ -331,13 +311,14 @@
             this.flowLayoutPanel1.TabIndex = 26;
             this.flowLayoutPanel1.UseWaitCursor = true;
             // 
-            // dataGridViewStudent
+            // dataGridView
             // 
-            this.dataGridViewStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewStudent.Location = new System.Drawing.Point(420, 13);
-            this.dataGridViewStudent.Name = "dataGridViewStudent";
-            this.dataGridViewStudent.Size = new System.Drawing.Size(669, 425);
-            this.dataGridViewStudent.TabIndex = 25;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(420, 13);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(669, 425);
+            this.dataGridView.TabIndex = 25;
+            this.dataGridView.SelectionChanged += new System.EventHandler(this.dataGridView_SelectionChanged);
             // 
             // label9
             // 
@@ -353,76 +334,72 @@
             // comboBoxStudent
             // 
             this.comboBoxStudent.FormattingEnabled = true;
-            this.comboBoxStudent.Location = new System.Drawing.Point(203, 132);
+            this.comboBoxStudent.Location = new System.Drawing.Point(203, 91);
             this.comboBoxStudent.Name = "comboBoxStudent";
             this.comboBoxStudent.Size = new System.Drawing.Size(197, 21);
             this.comboBoxStudent.TabIndex = 49;
             // 
-            // textBox1
+            // textBoxMath
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(204, 163);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(198, 22);
-            this.textBox1.TabIndex = 50;
+            this.textBoxMath.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMath.Location = new System.Drawing.Point(204, 122);
+            this.textBoxMath.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxMath.Name = "textBoxMath";
+            this.textBoxMath.Size = new System.Drawing.Size(198, 22);
+            this.textBoxMath.TabIndex = 50;
             // 
             // ScoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1096, 450);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxMath);
             this.Controls.Add(this.comboBoxStudent);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.buttonSearchStudent);
-            this.Controls.Add(this.textBoxSearchStudent);
-            this.Controls.Add(this.buttonUpdateStudent);
-            this.Controls.Add(this.buttonDeleteStudent);
-            this.Controls.Add(this.buttonSaveStudent);
-            this.Controls.Add(this.textBoxEnglishBox);
+            this.Controls.Add(this.buttonUpdate);
+            this.Controls.Add(this.buttonDelete);
+            this.Controls.Add(this.buttonSave);
+            this.Controls.Add(this.textBoxImage);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBoxMathScores);
+            this.Controls.Add(this.textBoxEnglish);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBoxClass);
+            this.Controls.Add(this.textBoxLaw);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBoxAddress);
+            this.Controls.Add(this.textBoxNetTechnology);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.textBoxPhysics);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBoxGender);
+            this.Controls.Add(this.textBoxBasicTechnology);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.dataGridViewStudent);
+            this.Controls.Add(this.dataGridView);
             this.Name = "ScoresForm";
             this.Text = "ScoresForm";
+            this.Load += new System.EventHandler(this.ScoresForm_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonSearchStudent;
-        private System.Windows.Forms.TextBox textBoxSearchStudent;
-        private System.Windows.Forms.Button buttonUpdateStudent;
-        private System.Windows.Forms.Button buttonDeleteStudent;
-        private System.Windows.Forms.Button buttonSaveStudent;
-        private System.Windows.Forms.TextBox textBoxEnglishBox;
+        private System.Windows.Forms.Button buttonUpdate;
+        private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.TextBox textBoxImage;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBoxMathScores;
+        private System.Windows.Forms.TextBox textBoxEnglish;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxClass;
+        private System.Windows.Forms.TextBox textBoxLaw;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBoxAddress;
+        private System.Windows.Forms.TextBox textBoxNetTechnology;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxPhysics;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxGender;
+        private System.Windows.Forms.TextBox textBoxBasicTechnology;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
@@ -432,9 +409,9 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.DataGridView dataGridViewStudent;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBoxStudent;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxMath;
     }
 }
