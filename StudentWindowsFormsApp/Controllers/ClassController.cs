@@ -106,12 +106,13 @@ namespace StudentWindowsFormsApp.Controllers
                             name = @Name,
                             quantity = @Quantity,
                             id_faculty = @IdFaculty
-                        WHERE id_student = @IdClass";
+                        WHERE id_class = @IdClass";
 
                     SqlCommand sqlCommand = new SqlCommand(sqlString, connection);
 
                     sqlCommand.Parameters.AddWithValue("@Name", classModel.Name);
                     sqlCommand.Parameters.AddWithValue("@Quantity", classModel.Quantity);
+                    sqlCommand.Parameters.AddWithValue("@IdClass", classModel.IdClass);
                     sqlCommand.Parameters.AddWithValue("@IdFaculty", classModel.IdFaculty);
                     
                     await sqlCommand.ExecuteNonQueryAsync();
