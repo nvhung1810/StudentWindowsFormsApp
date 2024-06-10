@@ -19,22 +19,43 @@ namespace StudentWindowsFormsApp.Controllers
             {
                 try
                 {
-                    SqlCommand sqlCommand = new SqlCommand("SELECT * FROM [student_management].[dbo].[scores]", connection);
+                    string query = @"
+                                    SELECT 
+                                        s.[id_scores],
+                                        st.[full_name], 
+                                        s.[math], 
+                                        s.[basic_technology], 
+                                        s.[physics], 
+                                        s.[net_technology], 
+                                        s.[general_law], 
+                                        s.[english], 
+                                        s.[image_processing],
+                                        st.[id_student]
+                                    FROM 
+                                        [student_management].[dbo].[scores] s 
+                                    INNER JOIN 
+                                        [student_management].[dbo].[students] st 
+                                    ON 
+                                        s.[id_student] = st.[id_student]";
+
+                    SqlCommand sqlCommand = new SqlCommand(query, connection);
                     SqlDataReader reader = sqlCommand.ExecuteReader();
 
                     while (await reader.ReadAsync())
                     {
+                        Console.WriteLine(reader.GetString(1));
                         ScoresModel scoresModel = new ScoresModel
                         {
                             IdScores = reader.GetInt32(0),
-                            Math = reader.IsDBNull(1) ? -1 : reader.GetInt32(1),
-                            BasicTechnology = reader.IsDBNull(2) ? -1 : reader.GetInt32(2),
-                            Physics = reader.IsDBNull(3) ? -1 : reader.GetInt32(3),
-                            NetTechnology = reader.IsDBNull(4) ? -1 : reader.GetInt32(4),
-                            GeneralLaw = reader.IsDBNull(5) ? -1 : reader.GetInt32(5),
-                            English = reader.IsDBNull(6) ? -1 : reader.GetInt32(6),
-                            ImageProcessing = reader.IsDBNull(7) ? -1 : reader.GetInt32(7),
-                            IdStudent = reader.IsDBNull(7) ? -1 : reader.GetInt32(7),
+                            StudentName = reader.GetString(1),
+                            Math = reader.IsDBNull(2) ? -1 : reader.GetInt32(2),
+                            BasicTechnology = reader.IsDBNull(3) ? -1 : reader.GetInt32(3),
+                            Physics = reader.IsDBNull(4) ? -1 : reader.GetInt32(4),
+                            NetTechnology = reader.IsDBNull(5) ? -1 : reader.GetInt32(5),
+                            GeneralLaw = reader.IsDBNull(6) ? -1 : reader.GetInt32(6),
+                            English = reader.IsDBNull(7) ? -1 : reader.GetInt32(7),
+                            ImageProcessing = reader.IsDBNull(8) ? -1 : reader.GetInt32(8),
+                            IdStudent = reader.IsDBNull(9) ? -1 : reader.GetInt32(9),
                         };
 
                         scores.Add(scoresModel);

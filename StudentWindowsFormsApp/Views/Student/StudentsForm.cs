@@ -18,11 +18,15 @@ namespace StudentWindowsFormsApp.Views
     public partial class StudentsForm : Form
     {
         private readonly StudentController studentController;
+        private readonly FacultyController facultyController;
+        private readonly ClassController classController;
 
         public StudentsForm()
         {
             InitializeComponent();
             studentController = new StudentController();
+            facultyController = new FacultyController();
+            classController = new ClassController();
         }
 
         private async void StudentsForm_Load(object sender, EventArgs e)
@@ -34,6 +38,14 @@ namespace StudentWindowsFormsApp.Views
                 dataGridViewStudent.DataSource = new BindingList<Student>(students);
                 dataGridViewStudent.AutoGenerateColumns = true;
                 dataGridViewStudent.Refresh();
+                List<ClassModel> classModels = await classController.GetAll();
+                comboBoxClass.DataSource = classModels;
+                comboBoxClass.DisplayMember = "Name";
+                comboBoxClass.ValueMember = "IdClass";
+                List<FacultyModel> facultyModels = await facultyController.GetAllFaculty();
+                comboBoxFaculty.DataSource = facultyModels;
+                comboBoxFaculty.DisplayMember = "Name";
+                comboBoxFaculty.ValueMember = "IdFaculty";
             }
             catch (Exception ex)
             {
@@ -43,6 +55,9 @@ namespace StudentWindowsFormsApp.Views
 
         private async void buttonSaveStudent_Click(object sender, EventArgs e)
         {
+            int idClassSelected = (int)comboBoxClass.SelectedValue;
+            int idFacultySelected = (int)comboBoxFaculty.SelectedValue;
+
             Student student = new Student
             {
                 FullName = textBoxFullName.Text,
@@ -53,6 +68,8 @@ namespace StudentWindowsFormsApp.Views
                 Gender = textBoxGender.Text,
                 Gpa = int.Parse(textBoxGpa.Text),
                 Phone = int.Parse(textBoxPhone.Text),
+                IdClass = idClassSelected,
+                IdFaculty = idFacultySelected
             };
 
             try
@@ -112,6 +129,8 @@ namespace StudentWindowsFormsApp.Views
         {
             DataGridViewRow selectedRow = dataGridViewStudent.SelectedRows[0];
             string id = selectedRow.Cells["IdStudent"].Value.ToString();
+            int idClassSelected = (int)comboBoxClass.SelectedValue;
+            int idFacultySelected = (int)comboBoxFaculty.SelectedValue;
 
 
             Student student = new Student
@@ -124,6 +143,10 @@ namespace StudentWindowsFormsApp.Views
                 Gender = textBoxGender.Text,
                 Gpa = int.Parse(textBoxGpa.Text),
                 Phone = int.Parse(textBoxPhone.Text),
+                IdClass = idClassSelected,
+                IdFaculty = idFacultySelected,
+                IdStudent = int.Parse(id)
+
             };
 
             try
@@ -164,6 +187,15 @@ namespace StudentWindowsFormsApp.Views
             textBoxGpa.Text = selectedRow.Cells["Gpa"].Value?.ToString();
             textBoxEmail.Text = selectedRow.Cells["Email"].Value?.ToString();
             textBoxGender.Text = selectedRow.Cells["Gender"].Value?.ToString();
+
+            var idClass = selectedRow.Cells["IdClass"].Value;
+            var idFaculty = selectedRow.Cells["IdFaculty"].Value;
+
+            if (idClass != null && idFaculty != null)
+            {
+                comboBoxClass.SelectedValue = idClass;
+                comboBoxFaculty.SelectedValue = idFaculty;
+            }
         }
 
         private async void buttonSearchStudent_Click(object sender, EventArgs e)

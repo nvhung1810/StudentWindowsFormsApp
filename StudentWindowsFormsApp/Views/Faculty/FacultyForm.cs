@@ -65,16 +65,45 @@ namespace StudentWindowsFormsApp.Views.Faculty
         private async void LoadData()
         {
             List<FacultyModel> faculties = await controller.GetAllFaculty();
-            dataGridViewFaculty.DataSource = new BindingList<FacultyModel>(faculties);
-            dataGridViewFaculty.AutoGenerateColumns = true;
+
+            var bindingList = new BindingList<FacultyModel>(faculties);
+            var source = new BindingSource(bindingList, null);
+
+            dataGridViewFaculty.AutoGenerateColumns = false;
+
+            dataGridViewFaculty.Columns.Clear();
+
+            dataGridViewFaculty.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "IdFaculty",
+                HeaderText = "ID Khoa"
+            });
+            dataGridViewFaculty.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "Name",
+                HeaderText = "Tên Khoa"
+            });
+            dataGridViewFaculty.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "Phone",
+                HeaderText = "SDT"
+            });
+            dataGridViewFaculty.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "Address",
+                HeaderText = "Địa chỉ"
+            });
+
+            dataGridViewFaculty.DataSource = source;
+
             dataGridViewFaculty.Refresh();
         }
+
 
         private void ClearInput()
         {
             textBoxFaculty.Clear();
             textBoxPhone.Clear();
-            textBoxAddress.Clear();
             textBoxAddress.Clear();
         }
 

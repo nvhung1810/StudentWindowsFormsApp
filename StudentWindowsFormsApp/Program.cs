@@ -20,7 +20,7 @@ namespace StudentWindowsFormsApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ClassForm());
+            Application.Run(new StudentsForm());
         }
     }
 }

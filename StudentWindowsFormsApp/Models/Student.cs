@@ -17,5 +17,7 @@ namespace StudentWindowsFormsApp.Models
         public int Gpa { get; set; }
         public int Phone { get; set; }
         public string Email { get; set; }
+        public int IdClass {  get; set; }
+        public int IdFaculty { get; set; }
     }
 }

@@ -149,7 +149,6 @@ namespace StudentWindowsFormsApp.Views.Scores
             {
                 comboBoxStudent.SelectedValue = idFacultyValue;
             }
-            Console.WriteLine(selectedRow.Cells["IdStudent"].Value?.ToString());
         }
 
         private void buttonHome_Click(object sender, EventArgs e)

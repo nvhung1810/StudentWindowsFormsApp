@@ -28,8 +28,8 @@ namespace StudentWindowsFormsApp.Controllers
                         {
                             IdFaculty = reader.GetInt32(0),
                             Name = reader.IsDBNull(1) ? "-" : reader.GetString(1),
-                            Address = reader.IsDBNull(2) ? "-" : reader.GetString(2),
-                            Phone = reader.IsDBNull(3) ? "-" : reader.GetString(3),
+                            Phone = reader.IsDBNull(2) ? "-" : reader.GetString(2),
+                            Address = reader.IsDBNull(3) ? "-" : reader.GetString(3),
                         };
 
                         facultyList.Add(faculty);

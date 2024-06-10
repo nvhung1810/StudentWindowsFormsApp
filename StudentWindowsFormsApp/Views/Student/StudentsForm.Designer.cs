@@ -64,6 +64,10 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.comboBoxFaculty = new System.Windows.Forms.ComboBox();
+            this.comboBoxClass = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudent)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -221,7 +225,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(175, 371);
+            this.label8.Location = new System.Drawing.Point(175, 366);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 16);
@@ -233,7 +237,7 @@
             this.buttonSaveStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSaveStudent.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveStudent.Image")));
             this.buttonSaveStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSaveStudent.Location = new System.Drawing.Point(187, 411);
+            this.buttonSaveStudent.Location = new System.Drawing.Point(180, 480);
             this.buttonSaveStudent.Name = "buttonSaveStudent";
             this.buttonSaveStudent.Size = new System.Drawing.Size(87, 28);
             this.buttonSaveStudent.TabIndex = 19;
@@ -247,7 +251,7 @@
             this.buttonDeleteStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDeleteStudent.Image = ((System.Drawing.Image)(resources.GetObject("buttonDeleteStudent.Image")));
             this.buttonDeleteStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDeleteStudent.Location = new System.Drawing.Point(414, 411);
+            this.buttonDeleteStudent.Location = new System.Drawing.Point(407, 480);
             this.buttonDeleteStudent.Name = "buttonDeleteStudent";
             this.buttonDeleteStudent.Size = new System.Drawing.Size(65, 27);
             this.buttonDeleteStudent.TabIndex = 20;
@@ -261,7 +265,7 @@
             this.buttonUpdateStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdateStudent.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdateStudent.Image")));
             this.buttonUpdateStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUpdateStudent.Location = new System.Drawing.Point(295, 411);
+            this.buttonUpdateStudent.Location = new System.Drawing.Point(288, 480);
             this.buttonUpdateStudent.Name = "buttonUpdateStudent";
             this.buttonUpdateStudent.Size = new System.Drawing.Size(95, 27);
             this.buttonUpdateStudent.TabIndex = 21;
@@ -323,7 +327,7 @@
             this.flowLayoutPanel1.Controls.Add(this.buttonFacultyManagement);
             this.flowLayoutPanel1.Controls.Add(this.buttonLogout);
             this.flowLayoutPanel1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, -1);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 60);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(144, 461);
@@ -468,11 +472,53 @@
             this.label14.TabIndex = 30;
             this.label14.Text = "Lớp:";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(176, 397);
+            this.label15.Margin = new System.Windows.Forms.Padding(0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(38, 16);
+            this.label15.TabIndex = 31;
+            this.label15.Text = "Khoa";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(177, 422);
+            this.label16.Margin = new System.Windows.Forms.Padding(0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(30, 16);
+            this.label16.TabIndex = 32;
+            this.label16.Text = "Lớp";
+            // 
+            // comboBoxFaculty
+            // 
+            this.comboBoxFaculty.FormattingEnabled = true;
+            this.comboBoxFaculty.Location = new System.Drawing.Point(267, 392);
+            this.comboBoxFaculty.Name = "comboBoxFaculty";
+            this.comboBoxFaculty.Size = new System.Drawing.Size(225, 21);
+            this.comboBoxFaculty.TabIndex = 33;
+            // 
+            // comboBoxClass
+            // 
+            this.comboBoxClass.FormattingEnabled = true;
+            this.comboBoxClass.Location = new System.Drawing.Point(266, 422);
+            this.comboBoxClass.Name = "comboBoxClass";
+            this.comboBoxClass.Size = new System.Drawing.Size(226, 21);
+            this.comboBoxClass.TabIndex = 34;
+            // 
             // StudentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1285, 462);
+            this.ClientSize = new System.Drawing.Size(1285, 585);
+            this.Controls.Add(this.comboBoxClass);
+            this.Controls.Add(this.comboBoxFaculty);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -549,5 +595,9 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox comboBoxFaculty;
+        private System.Windows.Forms.ComboBox comboBoxClass;
     }
 }

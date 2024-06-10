@@ -33,6 +33,8 @@ namespace StudentWindowsFormsApp.Controllers
                             Gpa = reader.IsDBNull(6) ? -1 : reader.GetInt32(6),
                             Phone = reader.IsDBNull(7) ? -1 : reader.GetInt32(7),
                             Email = reader.IsDBNull(8) ? "-" : reader.GetString(8),
+                            IdFaculty = reader.IsDBNull(9) ? -1 : reader.GetInt32(9),
+                            IdClass = reader.IsDBNull(10) ? -1 : reader.GetInt32(10),
                         };
 
                         students.Add(student);
@@ -56,8 +58,8 @@ namespace StudentWindowsFormsApp.Controllers
                 {
                     SqlCommand sqlCommand = new SqlCommand(
                         "INSERT INTO [student_management].[dbo].[students] " +
-                        "(full_name, date_of_birth, gender, address, class, gpa, phone, email) " +
-                        "VALUES (@FullName, @DateOfBirth, @Gender, @Address, @Class, @Gpa, @Phone, @Email)",
+                        "(full_name, date_of_birth, gender, address, class, gpa, phone, email, id_class, id_faculty) " +
+                        "VALUES (@FullName, @DateOfBirth, @Gender, @Address, @Class, @Gpa, @Phone, @Email, @IdClass, @IdFaculty)",
                         connection);
 
                     sqlCommand.Parameters.AddWithValue("@FullName", student.FullName);
@@ -68,6 +70,8 @@ namespace StudentWindowsFormsApp.Controllers
                     sqlCommand.Parameters.AddWithValue("@Gpa", student.Gpa);
                     sqlCommand.Parameters.AddWithValue("@Phone", student.Phone);
                     sqlCommand.Parameters.AddWithValue("@Email", student.Email);
+                    sqlCommand.Parameters.AddWithValue("@IdClass", student.IdClass);
+                    sqlCommand.Parameters.AddWithValue("@IdFaculty", student.IdFaculty);
 
                     await sqlCommand.ExecuteNonQueryAsync();
                     return true;
@@ -110,17 +114,22 @@ namespace StudentWindowsFormsApp.Controllers
                     string sqlString = @"
                         UPDATE [student_management].[dbo].[students]
                         SET 
-                            full_name = @FullName,
-                            date_of_birth = @DateOfBirth,
-                            gender = @Gender,
-                            address = @Address,
-                            class = @Class,
-                            gpa = @Gpa,
-                            phone = @Phone,
-                            email = @Email
+                            [full_name] = @FullName,
+                            [date_of_birth] = @DateOfBirth,
+                            [gender] = @Gender,
+                            [address] = @Address,
+                            [class] = @Class,
+                            [gpa] = @Gpa,
+                            [phone] = @Phone,
+                            [email] = @Email,
+                            [id_faculty] = @IdFaculty,
+                            [id_class] = @IdClass
                         WHERE id_student = @IdStudent";
 
                     SqlCommand sqlCommand = new SqlCommand(sqlString, connection);
+
+                    Console.WriteLine(student.IdStudent);
+
 
                     sqlCommand.Parameters.AddWithValue("@FullName", student.FullName);
                     sqlCommand.Parameters.AddWithValue("@DateOfBirth", student.DateOfBirth);
@@ -130,6 +139,8 @@ namespace StudentWindowsFormsApp.Controllers
                     sqlCommand.Parameters.AddWithValue("@Gpa", student.Gpa);
                     sqlCommand.Parameters.AddWithValue("@Phone", student.Phone);
                     sqlCommand.Parameters.AddWithValue("@Email", student.Email);
+                    sqlCommand.Parameters.AddWithValue("@IdClass", student.IdClass);
+                    sqlCommand.Parameters.AddWithValue("@IdFaculty", student.IdFaculty);
                     sqlCommand.Parameters.AddWithValue("@IdStudent", student.IdStudent);
 
                     await sqlCommand.ExecuteNonQueryAsync();
@@ -171,6 +182,8 @@ namespace StudentWindowsFormsApp.Controllers
                             Gpa = reader.IsDBNull(6) ? -1 : reader.GetInt32(6),
                             Phone = reader.IsDBNull(7) ? -1 : reader.GetInt32(7),
                             Email = reader.IsDBNull(8) ? "-" : reader.GetString(8),
+                            IdFaculty = reader.IsDBNull(9) ? -1 : reader.GetInt32(9),
+                            IdClass = reader.IsDBNull(10) ? -1 : reader.GetInt32(10),
                         };
 
                         students.Add(student);

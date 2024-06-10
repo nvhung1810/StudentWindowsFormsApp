@@ -9,6 +9,7 @@ namespace StudentWindowsFormsApp.Models
     internal class ScoresModel
     {
         public int IdScores { get; set; }
+        public string StudentName { get; set; }
         public int Math { get; set; }
         public int BasicTechnology { get; set; }
         public int Physics { get; set; }
