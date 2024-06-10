@@ -33,17 +33,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxFullName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxGender = new System.Windows.Forms.TextBox();
+            this.textBoxDateOfBirth = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxGender = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxClass = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBoxMathScores = new System.Windows.Forms.TextBox();
+            this.textBoxGpa = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBoxEnglishBox = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.buttonSaveStudent = new System.Windows.Forms.Button();
             this.buttonDeleteStudent = new System.Windows.Forms.Button();
@@ -59,6 +59,11 @@
             this.buttonScoresManagement = new System.Windows.Forms.Button();
             this.buttonFacultyManagement = new System.Windows.Forms.Button();
             this.buttonLogout = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudent)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -103,14 +108,14 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Ngày Sinh:";
             // 
-            // textBoxGender
+            // textBoxDateOfBirth
             // 
-            this.textBoxGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxGender.Location = new System.Drawing.Point(264, 209);
-            this.textBoxGender.Margin = new System.Windows.Forms.Padding(0);
-            this.textBoxGender.Name = "textBoxGender";
-            this.textBoxGender.Size = new System.Drawing.Size(229, 22);
-            this.textBoxGender.TabIndex = 8;
+            this.textBoxDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDateOfBirth.Location = new System.Drawing.Point(264, 209);
+            this.textBoxDateOfBirth.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxDateOfBirth.Name = "textBoxDateOfBirth";
+            this.textBoxDateOfBirth.Size = new System.Drawing.Size(229, 22);
+            this.textBoxDateOfBirth.TabIndex = 8;
             // 
             // label3
             // 
@@ -123,14 +128,14 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Giới tính:";
             // 
-            // textBoxEmail
+            // textBoxGender
             // 
-            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmail.Location = new System.Drawing.Point(264, 240);
-            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(0);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(229, 22);
-            this.textBoxEmail.TabIndex = 10;
+            this.textBoxGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGender.Location = new System.Drawing.Point(264, 240);
+            this.textBoxGender.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxGender.Name = "textBoxGender";
+            this.textBoxGender.Size = new System.Drawing.Size(229, 22);
+            this.textBoxGender.TabIndex = 10;
             // 
             // label4
             // 
@@ -183,14 +188,14 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Lớp:";
             // 
-            // textBoxMathScores
+            // textBoxGpa
             // 
-            this.textBoxMathScores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMathScores.Location = new System.Drawing.Point(265, 331);
-            this.textBoxMathScores.Margin = new System.Windows.Forms.Padding(0);
-            this.textBoxMathScores.Name = "textBoxMathScores";
-            this.textBoxMathScores.Size = new System.Drawing.Size(229, 22);
-            this.textBoxMathScores.TabIndex = 16;
+            this.textBoxGpa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGpa.Location = new System.Drawing.Point(265, 331);
+            this.textBoxGpa.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxGpa.Name = "textBoxGpa";
+            this.textBoxGpa.Size = new System.Drawing.Size(229, 22);
+            this.textBoxGpa.TabIndex = 16;
             // 
             // label7
             // 
@@ -199,18 +204,18 @@
             this.label7.Location = new System.Drawing.Point(174, 335);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 16);
+            this.label7.Size = new System.Drawing.Size(38, 16);
             this.label7.TabIndex = 15;
-            this.label7.Text = "Điểm toán";
+            this.label7.Text = "GPA:";
             // 
-            // textBoxEnglishBox
+            // textBoxEmail
             // 
-            this.textBoxEnglishBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEnglishBox.Location = new System.Drawing.Point(266, 364);
-            this.textBoxEnglishBox.Margin = new System.Windows.Forms.Padding(0);
-            this.textBoxEnglishBox.Name = "textBoxEnglishBox";
-            this.textBoxEnglishBox.Size = new System.Drawing.Size(229, 22);
-            this.textBoxEnglishBox.TabIndex = 18;
+            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.Location = new System.Drawing.Point(266, 364);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(229, 22);
+            this.textBoxEmail.TabIndex = 18;
             // 
             // label8
             // 
@@ -219,9 +224,9 @@
             this.label8.Location = new System.Drawing.Point(175, 371);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 16);
+            this.label8.Size = new System.Drawing.Size(44, 16);
             this.label8.TabIndex = 17;
-            this.label8.Text = "Điểm Anh:";
+            this.label8.Text = "Email:";
             // 
             // buttonSaveStudent
             // 
@@ -409,11 +414,70 @@
             this.buttonLogout.UseWaitCursor = true;
             this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(174, 215);
+            this.label10.Margin = new System.Windows.Forms.Padding(0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(72, 16);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Ngày Sinh:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(173, 246);
+            this.label11.Margin = new System.Windows.Forms.Padding(0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(57, 16);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "Giới tính:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(606, 223);
+            this.label12.Margin = new System.Windows.Forms.Padding(0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(0, 16);
+            this.label12.TabIndex = 29;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(173, 277);
+            this.label13.Margin = new System.Windows.Forms.Padding(0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(50, 16);
+            this.label13.TabIndex = 29;
+            this.label13.Text = "Địa chỉ:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(173, 306);
+            this.label14.Margin = new System.Windows.Forms.Padding(0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(33, 16);
+            this.label14.TabIndex = 30;
+            this.label14.Text = "Lớp:";
+            // 
             // StudentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1285, 462);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.buttonSearchStudent);
@@ -422,17 +486,17 @@
             this.Controls.Add(this.buttonUpdateStudent);
             this.Controls.Add(this.buttonDeleteStudent);
             this.Controls.Add(this.buttonSaveStudent);
-            this.Controls.Add(this.textBoxEnglishBox);
+            this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBoxMathScores);
+            this.Controls.Add(this.textBoxGpa);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBoxClass);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxAddress);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxGender);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBoxDateOfBirth);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxFullName);
@@ -454,17 +518,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxFullName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxGender;
+        private System.Windows.Forms.TextBox textBoxDateOfBirth;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxGender;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxClass;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBoxMathScores;
+        private System.Windows.Forms.TextBox textBoxGpa;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxEnglishBox;
+        private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button buttonSaveStudent;
         private System.Windows.Forms.Button buttonDeleteStudent;
@@ -480,5 +544,10 @@
         private System.Windows.Forms.Button buttonScoresManagement;
         private System.Windows.Forms.Button buttonFacultyManagement;
         private System.Windows.Forms.Button buttonLogout;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }

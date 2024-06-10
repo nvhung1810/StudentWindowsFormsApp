@@ -48,11 +48,11 @@ namespace StudentWindowsFormsApp.Views
                 FullName = textBoxFullName.Text,
                 DateOfBirth = dateTimePickerDateOfBirth.Value.ToString("yyyy-MM-dd"),
                 Address = textBoxAddress.Text,
-                Email = textBoxEmail.Text,
+                Email = textBoxGender.Text,
                 Class = textBoxClass.Text,
-                Gender = textBoxGender.Text,
-                Gpa = int.Parse(textBoxMathScores.Text),
-                Phone = int.Parse(textBoxEnglishBox.Text),
+                Gender = textBoxDateOfBirth.Text,
+                Gpa = int.Parse(textBoxGpa.Text),
+                Phone = int.Parse(textBoxEmail.Text),
             };
 
             try
@@ -78,12 +78,12 @@ namespace StudentWindowsFormsApp.Views
         {
             textBoxFullName.Clear();
             dateTimePickerDateOfBirth.Value = DateTime.Today;
-            textBoxGender.Clear();
+            textBoxDateOfBirth.Clear();
             textBoxAddress.Clear();
             textBoxClass.Clear();
-            textBoxMathScores.Clear();
-            textBoxEnglishBox.Clear();
+            textBoxGpa.Clear();
             textBoxEmail.Clear();
+            textBoxGender.Clear();
         }
 
         private async void buttonDeleteStudent_Click(object sender, EventArgs e)
@@ -117,12 +117,12 @@ namespace StudentWindowsFormsApp.Views
                 IdStudent = int.Parse(id),
                 FullName = textBoxFullName.Text,
                 DateOfBirth = dateTimePickerDateOfBirth.Value.ToString("yyyy-MM-dd"),
-                Gender = textBoxGender.Text,
+                Gender = textBoxDateOfBirth.Text,
                 Address = textBoxAddress.Text,
                 Class = textBoxClass.Text,
-                Gpa = int.Parse(textBoxMathScores.Text),
-                Phone = int.Parse(textBoxEnglishBox.Text),
-                Email = textBoxEmail.Text,
+                Gpa = int.Parse(textBoxGpa.Text),
+                Phone = int.Parse(textBoxEmail.Text),
+                Email = textBoxGender.Text,
             };
 
             try
@@ -157,12 +157,12 @@ namespace StudentWindowsFormsApp.Views
         {
             textBoxFullName.Text = selectedRow.Cells["FullName"].Value?.ToString();
             dateTimePickerDateOfBirth.Value = Convert.ToDateTime(selectedRow.Cells["DateOfBirth"].Value);
-            textBoxGender.Text = selectedRow.Cells["Gender"].Value?.ToString();
+            textBoxDateOfBirth.Text = selectedRow.Cells["Gender"].Value?.ToString();
             textBoxAddress.Text = selectedRow.Cells["Address"].Value?.ToString();
             textBoxClass.Text = selectedRow.Cells["Class"].Value?.ToString();
-            textBoxMathScores.Text = selectedRow.Cells["Gpa"].Value?.ToString();
-            textBoxEnglishBox.Text = selectedRow.Cells["Phone"].Value?.ToString();
-            textBoxEmail.Text = selectedRow.Cells["Email"].Value?.ToString();
+            textBoxGpa.Text = selectedRow.Cells["Gpa"].Value?.ToString();
+            textBoxEmail.Text = selectedRow.Cells["Phone"].Value?.ToString();
+            textBoxGender.Text = selectedRow.Cells["Email"].Value?.ToString();
         }
 
         private async void buttonSearchStudent_Click(object sender, EventArgs e)
