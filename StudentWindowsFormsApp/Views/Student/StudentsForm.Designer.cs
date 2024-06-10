@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxFullName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxDateOfBirth = new System.Windows.Forms.TextBox();
+            this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxGender = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -108,14 +108,14 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Ngày Sinh:";
             // 
-            // textBoxDateOfBirth
+            // textBoxPhone
             // 
-            this.textBoxDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDateOfBirth.Location = new System.Drawing.Point(264, 209);
-            this.textBoxDateOfBirth.Margin = new System.Windows.Forms.Padding(0);
-            this.textBoxDateOfBirth.Name = "textBoxDateOfBirth";
-            this.textBoxDateOfBirth.Size = new System.Drawing.Size(229, 22);
-            this.textBoxDateOfBirth.TabIndex = 8;
+            this.textBoxPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPhone.Location = new System.Drawing.Point(264, 209);
+            this.textBoxPhone.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxPhone.Name = "textBoxPhone";
+            this.textBoxPhone.Size = new System.Drawing.Size(229, 22);
+            this.textBoxPhone.TabIndex = 8;
             // 
             // label3
             // 
@@ -421,9 +421,9 @@
             this.label10.Location = new System.Drawing.Point(174, 215);
             this.label10.Margin = new System.Windows.Forms.Padding(0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 16);
+            this.label10.Size = new System.Drawing.Size(38, 16);
             this.label10.TabIndex = 27;
-            this.label10.Text = "Ngày Sinh:";
+            this.label10.Text = "SDT:";
             // 
             // label11
             // 
@@ -496,7 +496,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBoxGender);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBoxDateOfBirth);
+            this.Controls.Add(this.textBoxPhone);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxFullName);
@@ -518,7 +518,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxFullName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxDateOfBirth;
+        private System.Windows.Forms.TextBox textBoxPhone;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxGender;
         private System.Windows.Forms.Label label4;
