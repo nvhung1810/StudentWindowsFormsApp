@@ -1,5 +1,7 @@
 ﻿using StudentWindowsFormsApp.Controllers;
 using StudentWindowsFormsApp.Models;
+using StudentWindowsFormsApp.Views.Faculty;
+using StudentWindowsFormsApp.Views.Scores;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +28,7 @@ namespace StudentWindowsFormsApp.Views.Class
 
         private async void ClassForm_Load(object sender, EventArgs e)
         {
+            FormHelper.CenterForm(this);
             try
             {
                 List<FacultyModel> faculties = await facultyController.GetAllFaculty();
@@ -171,6 +174,32 @@ namespace StudentWindowsFormsApp.Views.Class
             {
                 Console.WriteLine($"{ex.Message}");
             }
+        }
+
+        private void buttonNavigateStudent_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StudentsForm studentForm = new StudentsForm();
+            studentForm.ShowDialog();
+        }
+
+        private void buttonScoresManagement_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ScoresForm scoresForm = new ScoresForm();
+            scoresForm.ShowDialog();
+        }
+
+        private void buttonFacultyManagement_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FacultyForm facultyForm = new FacultyForm();
+            facultyForm.ShowDialog();   
+        }
+
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

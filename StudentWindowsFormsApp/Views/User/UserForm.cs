@@ -1,5 +1,8 @@
 ﻿using StudentWindowsFormsApp.Controllers;
 using StudentWindowsFormsApp.Models;
+using StudentWindowsFormsApp.Views.Class;
+using StudentWindowsFormsApp.Views.Faculty;
+using StudentWindowsFormsApp.Views.Scores;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,13 +24,9 @@ namespace StudentWindowsFormsApp.Views
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private async void UserForm_Load(object sender, EventArgs e)
         {
+            FormHelper.CenterForm(this);
             UserController userController = new UserController();
 
             User user = await userController.GetUserById(1);
@@ -92,9 +91,30 @@ namespace StudentWindowsFormsApp.Views
             studentsForm.ShowDialog();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void buttonClassForm_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            ClassForm classForm = new ClassForm();
+            classForm.ShowDialog();
+        }
 
+        private void buttonScoresManagement_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ScoresForm scoresForm = new ScoresForm();
+            scoresForm.ShowDialog();
+        }
+
+        private void buttonFacultyManagement_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FacultyForm facultyForm = new FacultyForm();
+            facultyForm.ShowDialog();
+        }
+
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

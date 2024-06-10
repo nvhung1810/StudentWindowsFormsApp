@@ -73,8 +73,10 @@
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DatabaseManager.cs" />
+    <Compile Include="FormHelper.cs" />
     <Compile Include="Models\ClassModel.cs" />
     <Compile Include="Models\FacultyModel.cs" />
+    <Compile Include="Models\LecturersModel.cs" />
     <Compile Include="Models\ScoresModel.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\User.cs" />
@@ -97,6 +99,12 @@
     </Compile>
     <Compile Include="Views\Faculty\FacultyForm.Designer.cs">
       <DependentUpon>FacultyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lecturers\LecturersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Lecturers\LecturersForm.Designer.cs">
+      <DependentUpon>LecturersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Scores\ScoresForm.cs">
       <SubType>Form</SubType>

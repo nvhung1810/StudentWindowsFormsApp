@@ -42,5 +42,10 @@ namespace StudentWindowsFormsApp
         {
 
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            FormHelper.CenterForm(this);
+        }
     }
 }

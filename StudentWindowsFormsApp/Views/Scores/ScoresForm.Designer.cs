@@ -45,19 +45,20 @@
             this.textBoxBasicTechnology = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.buttonNavigateStudent = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBoxStudent = new System.Windows.Forms.ComboBox();
             this.textBoxMath = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonHome = new System.Windows.Forms.Button();
+            this.buttonNavigateStudent = new System.Windows.Forms.Button();
+            this.buttonClassForm = new System.Windows.Forms.Button();
+            this.buttonScoresManagement = new System.Windows.Forms.Button();
+            this.buttonFacultyManagement = new System.Windows.Forms.Button();
+            this.buttonLogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonUpdate
@@ -65,7 +66,7 @@
             this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdate.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdate.Image")));
             this.buttonUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUpdate.Location = new System.Drawing.Point(203, 395);
+            this.buttonUpdate.Location = new System.Drawing.Point(297, 397);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(95, 27);
             this.buttonUpdate.TabIndex = 44;
@@ -79,7 +80,7 @@
             this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDelete.Image = ((System.Drawing.Image)(resources.GetObject("buttonDelete.Image")));
             this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDelete.Location = new System.Drawing.Point(322, 395);
+            this.buttonDelete.Location = new System.Drawing.Point(416, 397);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(65, 27);
             this.buttonDelete.TabIndex = 43;
@@ -93,7 +94,7 @@
             this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSave.Image = ((System.Drawing.Image)(resources.GetObject("buttonSave.Image")));
             this.buttonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSave.Location = new System.Drawing.Point(95, 395);
+            this.buttonSave.Location = new System.Drawing.Point(189, 397);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(87, 28);
             this.buttonSave.TabIndex = 42;
@@ -105,7 +106,7 @@
             // textBoxImage
             // 
             this.textBoxImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxImage.Location = new System.Drawing.Point(203, 307);
+            this.textBoxImage.Location = new System.Drawing.Point(297, 309);
             this.textBoxImage.Margin = new System.Windows.Forms.Padding(0);
             this.textBoxImage.Name = "textBoxImage";
             this.textBoxImage.Size = new System.Drawing.Size(200, 22);
@@ -115,7 +116,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(83, 314);
+            this.label8.Location = new System.Drawing.Point(177, 316);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 16);
@@ -125,7 +126,7 @@
             // textBoxEnglish
             // 
             this.textBoxEnglish.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEnglish.Location = new System.Drawing.Point(203, 274);
+            this.textBoxEnglish.Location = new System.Drawing.Point(297, 276);
             this.textBoxEnglish.Margin = new System.Windows.Forms.Padding(0);
             this.textBoxEnglish.Name = "textBoxEnglish";
             this.textBoxEnglish.Size = new System.Drawing.Size(199, 22);
@@ -135,7 +136,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(82, 278);
+            this.label7.Location = new System.Drawing.Point(176, 280);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 16);
@@ -145,7 +146,7 @@
             // textBoxLaw
             // 
             this.textBoxLaw.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLaw.Location = new System.Drawing.Point(203, 243);
+            this.textBoxLaw.Location = new System.Drawing.Point(297, 245);
             this.textBoxLaw.Margin = new System.Windows.Forms.Padding(0);
             this.textBoxLaw.Name = "textBoxLaw";
             this.textBoxLaw.Size = new System.Drawing.Size(199, 22);
@@ -155,7 +156,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(82, 247);
+            this.label6.Location = new System.Drawing.Point(176, 249);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 16);
@@ -165,7 +166,7 @@
             // textBoxNetTechnology
             // 
             this.textBoxNetTechnology.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNetTechnology.Location = new System.Drawing.Point(203, 214);
+            this.textBoxNetTechnology.Location = new System.Drawing.Point(297, 216);
             this.textBoxNetTechnology.Margin = new System.Windows.Forms.Padding(0);
             this.textBoxNetTechnology.Name = "textBoxNetTechnology";
             this.textBoxNetTechnology.Size = new System.Drawing.Size(199, 22);
@@ -175,7 +176,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(82, 217);
+            this.label5.Location = new System.Drawing.Point(176, 219);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 16);
@@ -185,7 +186,7 @@
             // textBoxPhysics
             // 
             this.textBoxPhysics.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPhysics.Location = new System.Drawing.Point(203, 183);
+            this.textBoxPhysics.Location = new System.Drawing.Point(297, 185);
             this.textBoxPhysics.Margin = new System.Windows.Forms.Padding(0);
             this.textBoxPhysics.Name = "textBoxPhysics";
             this.textBoxPhysics.Size = new System.Drawing.Size(198, 22);
@@ -195,7 +196,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(81, 187);
+            this.label4.Location = new System.Drawing.Point(175, 189);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 16);
@@ -205,7 +206,7 @@
             // textBoxBasicTechnology
             // 
             this.textBoxBasicTechnology.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBasicTechnology.Location = new System.Drawing.Point(203, 152);
+            this.textBoxBasicTechnology.Location = new System.Drawing.Point(297, 154);
             this.textBoxBasicTechnology.Margin = new System.Windows.Forms.Padding(0);
             this.textBoxBasicTechnology.Name = "textBoxBasicTechnology";
             this.textBoxBasicTechnology.Size = new System.Drawing.Size(198, 22);
@@ -215,7 +216,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(82, 128);
+            this.label2.Location = new System.Drawing.Point(176, 130);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 16);
@@ -226,95 +227,28 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(82, 94);
+            this.label1.Location = new System.Drawing.Point(176, 96);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 16);
             this.label1.TabIndex = 27;
             this.label1.Text = "Sinh Viên:";
             // 
-            // button1
-            // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(3, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(69, 37);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.UseWaitCursor = true;
-            // 
-            // buttonNavigateStudent
-            // 
-            this.buttonNavigateStudent.Image = ((System.Drawing.Image)(resources.GetObject("buttonNavigateStudent.Image")));
-            this.buttonNavigateStudent.Location = new System.Drawing.Point(3, 50);
-            this.buttonNavigateStudent.Name = "buttonNavigateStudent";
-            this.buttonNavigateStudent.Size = new System.Drawing.Size(69, 37);
-            this.buttonNavigateStudent.TabIndex = 2;
-            this.buttonNavigateStudent.UseVisualStyleBackColor = true;
-            this.buttonNavigateStudent.UseWaitCursor = true;
-            // 
-            // button4
-            // 
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(3, 93);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(69, 37);
-            this.button4.TabIndex = 4;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.UseWaitCursor = true;
-            // 
-            // button5
-            // 
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(3, 136);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(69, 37);
-            this.button5.TabIndex = 5;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.UseWaitCursor = true;
-            // 
-            // button6
-            // 
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(3, 179);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(69, 37);
-            this.button6.TabIndex = 6;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.UseWaitCursor = true;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(81, 155);
+            this.label3.Location = new System.Drawing.Point(175, 157);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 16);
             this.label3.TabIndex = 30;
             this.label3.Text = "Tin Cơ Sở:";
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.flowLayoutPanel1.Controls.Add(this.button1);
-            this.flowLayoutPanel1.Controls.Add(this.buttonNavigateStudent);
-            this.flowLayoutPanel1.Controls.Add(this.button4);
-            this.flowLayoutPanel1.Controls.Add(this.button5);
-            this.flowLayoutPanel1.Controls.Add(this.button6);
-            this.flowLayoutPanel1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(-1, -2);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(74, 453);
-            this.flowLayoutPanel1.TabIndex = 26;
-            this.flowLayoutPanel1.UseWaitCursor = true;
-            // 
             // dataGridView
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(420, 13);
+            this.dataGridView.Location = new System.Drawing.Point(514, 15);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.Size = new System.Drawing.Size(669, 425);
             this.dataGridView.TabIndex = 25;
@@ -325,7 +259,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label9.Location = new System.Drawing.Point(98, 9);
+            this.label9.Location = new System.Drawing.Point(192, 11);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(288, 33);
             this.label9.TabIndex = 48;
@@ -334,7 +268,7 @@
             // comboBoxStudent
             // 
             this.comboBoxStudent.FormattingEnabled = true;
-            this.comboBoxStudent.Location = new System.Drawing.Point(203, 91);
+            this.comboBoxStudent.Location = new System.Drawing.Point(297, 93);
             this.comboBoxStudent.Name = "comboBoxStudent";
             this.comboBoxStudent.Size = new System.Drawing.Size(197, 21);
             this.comboBoxStudent.TabIndex = 49;
@@ -342,17 +276,119 @@
             // textBoxMath
             // 
             this.textBoxMath.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMath.Location = new System.Drawing.Point(204, 122);
+            this.textBoxMath.Location = new System.Drawing.Point(298, 124);
             this.textBoxMath.Margin = new System.Windows.Forms.Padding(0);
             this.textBoxMath.Name = "textBoxMath";
             this.textBoxMath.Size = new System.Drawing.Size(198, 22);
             this.textBoxMath.TabIndex = 50;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.flowLayoutPanel1.Controls.Add(this.buttonHome);
+            this.flowLayoutPanel1.Controls.Add(this.buttonNavigateStudent);
+            this.flowLayoutPanel1.Controls.Add(this.buttonClassForm);
+            this.flowLayoutPanel1.Controls.Add(this.buttonScoresManagement);
+            this.flowLayoutPanel1.Controls.Add(this.buttonFacultyManagement);
+            this.flowLayoutPanel1.Controls.Add(this.buttonLogout);
+            this.flowLayoutPanel1.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(144, 461);
+            this.flowLayoutPanel1.TabIndex = 51;
+            this.flowLayoutPanel1.UseWaitCursor = true;
+            // 
+            // buttonHome
+            // 
+            this.buttonHome.Image = ((System.Drawing.Image)(resources.GetObject("buttonHome.Image")));
+            this.buttonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHome.Location = new System.Drawing.Point(3, 7);
+            this.buttonHome.Name = "buttonHome";
+            this.buttonHome.Size = new System.Drawing.Size(137, 37);
+            this.buttonHome.TabIndex = 1;
+            this.buttonHome.Text = "Trang Chủ";
+            this.buttonHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonHome.UseVisualStyleBackColor = true;
+            this.buttonHome.UseWaitCursor = true;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
+            // 
+            // buttonNavigateStudent
+            // 
+            this.buttonNavigateStudent.Image = ((System.Drawing.Image)(resources.GetObject("buttonNavigateStudent.Image")));
+            this.buttonNavigateStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonNavigateStudent.Location = new System.Drawing.Point(3, 50);
+            this.buttonNavigateStudent.Name = "buttonNavigateStudent";
+            this.buttonNavigateStudent.Size = new System.Drawing.Size(137, 37);
+            this.buttonNavigateStudent.TabIndex = 2;
+            this.buttonNavigateStudent.Text = "Quản Lý Sinh Viên";
+            this.buttonNavigateStudent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonNavigateStudent.UseVisualStyleBackColor = true;
+            this.buttonNavigateStudent.UseWaitCursor = true;
+            this.buttonNavigateStudent.Click += new System.EventHandler(this.buttonNavigateStudent_Click);
+            // 
+            // buttonClassForm
+            // 
+            this.buttonClassForm.Image = ((System.Drawing.Image)(resources.GetObject("buttonClassForm.Image")));
+            this.buttonClassForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonClassForm.Location = new System.Drawing.Point(3, 93);
+            this.buttonClassForm.Name = "buttonClassForm";
+            this.buttonClassForm.Size = new System.Drawing.Size(137, 37);
+            this.buttonClassForm.TabIndex = 3;
+            this.buttonClassForm.Text = "Quản Lý Lớp";
+            this.buttonClassForm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonClassForm.UseVisualStyleBackColor = true;
+            this.buttonClassForm.UseWaitCursor = true;
+            this.buttonClassForm.Click += new System.EventHandler(this.buttonClassForm_Click);
+            // 
+            // buttonScoresManagement
+            // 
+            this.buttonScoresManagement.Image = ((System.Drawing.Image)(resources.GetObject("buttonScoresManagement.Image")));
+            this.buttonScoresManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonScoresManagement.Location = new System.Drawing.Point(3, 136);
+            this.buttonScoresManagement.Name = "buttonScoresManagement";
+            this.buttonScoresManagement.Size = new System.Drawing.Size(137, 37);
+            this.buttonScoresManagement.TabIndex = 4;
+            this.buttonScoresManagement.Text = "Quản Lý Điểm";
+            this.buttonScoresManagement.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonScoresManagement.UseVisualStyleBackColor = true;
+            this.buttonScoresManagement.UseWaitCursor = true;
+            this.buttonScoresManagement.Click += new System.EventHandler(this.buttonScoresManagement_Click);
+            // 
+            // buttonFacultyManagement
+            // 
+            this.buttonFacultyManagement.Image = ((System.Drawing.Image)(resources.GetObject("buttonFacultyManagement.Image")));
+            this.buttonFacultyManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonFacultyManagement.Location = new System.Drawing.Point(3, 179);
+            this.buttonFacultyManagement.Name = "buttonFacultyManagement";
+            this.buttonFacultyManagement.Size = new System.Drawing.Size(137, 37);
+            this.buttonFacultyManagement.TabIndex = 5;
+            this.buttonFacultyManagement.Text = "Quản Lý Khoa";
+            this.buttonFacultyManagement.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonFacultyManagement.UseVisualStyleBackColor = true;
+            this.buttonFacultyManagement.UseWaitCursor = true;
+            this.buttonFacultyManagement.Click += new System.EventHandler(this.buttonFacultyManagement_Click);
+            // 
+            // buttonLogout
+            // 
+            this.buttonLogout.Image = ((System.Drawing.Image)(resources.GetObject("buttonLogout.Image")));
+            this.buttonLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonLogout.Location = new System.Drawing.Point(3, 222);
+            this.buttonLogout.Name = "buttonLogout";
+            this.buttonLogout.Size = new System.Drawing.Size(137, 37);
+            this.buttonLogout.TabIndex = 6;
+            this.buttonLogout.Text = "Đăng Xuất";
+            this.buttonLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonLogout.UseVisualStyleBackColor = true;
+            this.buttonLogout.UseWaitCursor = true;
+            // 
             // ScoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1096, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 450);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.textBoxMath);
             this.Controls.Add(this.comboBoxStudent);
             this.Controls.Add(this.label9);
@@ -373,13 +409,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.dataGridView);
             this.Name = "ScoresForm";
             this.Text = "ScoresForm";
             this.Load += new System.EventHandler(this.ScoresForm_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,16 +437,17 @@
         private System.Windows.Forms.TextBox textBoxBasicTechnology;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button buttonNavigateStudent;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBoxStudent;
         private System.Windows.Forms.TextBox textBoxMath;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button buttonHome;
+        private System.Windows.Forms.Button buttonNavigateStudent;
+        private System.Windows.Forms.Button buttonClassForm;
+        private System.Windows.Forms.Button buttonScoresManagement;
+        private System.Windows.Forms.Button buttonFacultyManagement;
+        private System.Windows.Forms.Button buttonLogout;
     }
 }

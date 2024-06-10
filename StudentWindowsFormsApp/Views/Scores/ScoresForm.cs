@@ -1,5 +1,7 @@
 ﻿using StudentWindowsFormsApp.Controllers;
 using StudentWindowsFormsApp.Models;
+using StudentWindowsFormsApp.Views.Class;
+using StudentWindowsFormsApp.Views.Faculty;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +27,7 @@ namespace StudentWindowsFormsApp.Views.Scores
 
         private async void ScoresForm_Load(object sender, EventArgs e)
         {
+            FormHelper.CenterForm(this);
             List<Student> students = await studentController.GetAllStudentAsync();
             comboBoxStudent.DataSource = students;
             comboBoxStudent.DisplayMember = "FullName";
@@ -148,6 +151,38 @@ namespace StudentWindowsFormsApp.Views.Scores
             }
             Console.WriteLine(selectedRow.Cells["IdStudent"].Value?.ToString());
         }
-       
+
+        private void buttonHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UserForm userForm = new UserForm();
+            userForm.ShowDialog();  
+        }
+
+        private void buttonNavigateStudent_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StudentsForm studentsForm = new StudentsForm(); 
+            studentsForm.ShowDialog();
+        }
+
+        private void buttonClassForm_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ClassForm classForm = new ClassForm();
+            classForm.ShowDialog();
+        }
+
+        private void buttonScoresManagement_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonFacultyManagement_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FacultyForm facultyForm = new FacultyForm();
+            facultyForm.ShowDialog();
+        }
     }
 }
