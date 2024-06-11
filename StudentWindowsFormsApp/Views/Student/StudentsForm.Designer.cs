@@ -120,6 +120,8 @@
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(229, 22);
             this.textBoxPhone.TabIndex = 8;
+            this.textBoxPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+
             // 
             // label3
             // 
@@ -200,6 +202,8 @@
             this.textBoxGpa.Name = "textBoxGpa";
             this.textBoxGpa.Size = new System.Drawing.Size(229, 22);
             this.textBoxGpa.TabIndex = 16;
+            this.textBoxGpa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+
             // 
             // label7
             // 

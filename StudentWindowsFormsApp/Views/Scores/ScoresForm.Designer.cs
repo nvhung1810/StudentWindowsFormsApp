@@ -131,6 +131,8 @@
             this.textBoxEnglish.Name = "textBoxEnglish";
             this.textBoxEnglish.Size = new System.Drawing.Size(199, 22);
             this.textBoxEnglish.TabIndex = 39;
+            this.textBoxEnglish.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+
             // 
             // label7
             // 
@@ -151,6 +153,8 @@
             this.textBoxLaw.Name = "textBoxLaw";
             this.textBoxLaw.Size = new System.Drawing.Size(199, 22);
             this.textBoxLaw.TabIndex = 37;
+            this.textBoxLaw.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+
             // 
             // label6
             // 
@@ -171,6 +175,8 @@
             this.textBoxNetTechnology.Name = "textBoxNetTechnology";
             this.textBoxNetTechnology.Size = new System.Drawing.Size(199, 22);
             this.textBoxNetTechnology.TabIndex = 35;
+            this.textBoxNetTechnology.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+
             // 
             // label5
             // 
@@ -191,6 +197,8 @@
             this.textBoxPhysics.Name = "textBoxPhysics";
             this.textBoxPhysics.Size = new System.Drawing.Size(198, 22);
             this.textBoxPhysics.TabIndex = 33;
+            this.textBoxPhysics.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+
             // 
             // label4
             // 
@@ -211,6 +219,8 @@
             this.textBoxBasicTechnology.Name = "textBoxBasicTechnology";
             this.textBoxBasicTechnology.Size = new System.Drawing.Size(198, 22);
             this.textBoxBasicTechnology.TabIndex = 31;
+            this.textBoxBasicTechnology.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+
             // 
             // label2
             // 
@@ -281,6 +291,8 @@
             this.textBoxMath.Name = "textBoxMath";
             this.textBoxMath.Size = new System.Drawing.Size(198, 22);
             this.textBoxMath.TabIndex = 50;
+            this.textBoxMath.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+
             // 
             // flowLayoutPanel1
             // 

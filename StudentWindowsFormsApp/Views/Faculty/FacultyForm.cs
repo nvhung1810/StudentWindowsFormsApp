@@ -109,35 +109,61 @@ namespace StudentWindowsFormsApp.Views.Faculty
 
         private async void buttonDelete_Click(object sender, EventArgs e)
         {
-            DataGridViewRow selectedRow = dataGridViewFaculty.SelectedRows[0];
-            string id = selectedRow.Cells["IdFaculty"].Value.ToString();
-
-            bool res = await controller.DeleteFaculty(int.Parse(id));
-
-            try
+            if (dataGridViewFaculty.SelectedRows.Count == 0)
             {
-                if (res)
-                {
-                    List<FacultyModel> faculties = await controller.GetAllFaculty();
-                    dataGridViewFaculty.DataSource = new BindingList<FacultyModel>(faculties);
-                    MessageBox.Show("Xóa thông tin khoa thành công");
-                    ClearInput();
-                }
-                else
-                {
-                    MessageBox.Show("Xóa thông tin khoa thất bại");
-                }
+                MessageBox.Show("Dữ liệu hiện tại không phù hợp để cập nhật.");
+                return;
             }
-            catch (Exception ex)
+            // Check if a row is selected
+            if (dataGridViewFaculty.SelectedRows.Count > 0)
             {
-                Console.WriteLine(ex.Message);
+                DataGridViewRow selectedRow = dataGridViewFaculty.SelectedRows[0];
+                string id = selectedRow.Cells[0].Value.ToString();
+
+                // Show confirmation dialog
+                DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa khoa này không?",
+                                                            "Xác nhận xóa",
+                                                            MessageBoxButtons.YesNo,
+                                                            MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    try
+                    {
+                        // Proceed with delete if Yes is clicked
+                        bool res = await controller.DeleteFaculty(int.Parse(id));
+
+                        if (res)
+                        {
+                            List<FacultyModel> faculties = await controller.GetAllFaculty();
+                            dataGridViewFaculty.DataSource = new BindingList<FacultyModel>(faculties);
+                            MessageBox.Show("Xóa thông tin khoa thành công");
+                            ClearInput();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Xóa thông tin khoa thất bại");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        MessageBox.Show("Đã xảy ra lỗi trong quá trình xóa khoa.");
+                    }
+                }
+                // No action needed if No is clicked
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một khoa để xóa");
             }
         }
+
 
         private async void buttonUpdate_Click(object sender, EventArgs e)
         {
             DataGridViewRow selectedRow = dataGridViewFaculty.SelectedRows[0];
-            string id = selectedRow.Cells["IdFaculty"].Value.ToString();
+            string id = selectedRow.Cells[0].Value.ToString();
 
 
             FacultyModel faculty = new FacultyModel
@@ -177,9 +203,10 @@ namespace StudentWindowsFormsApp.Views.Faculty
 
         private void FillData(DataGridViewRow selectedRow)
         {
-            textBoxFaculty.Text = selectedRow.Cells["Name"].Value?.ToString();
-            textBoxPhone.Text = selectedRow.Cells["Phone"].Value?.ToString();
-            textBoxAddress.Text = selectedRow.Cells["Address"].Value?.ToString();
+            Console.Write(selectedRow.Cells[1].Value);
+            textBoxFaculty.Text = selectedRow.Cells[1].Value?.ToString();
+            textBoxPhone.Text = selectedRow.Cells[2].Value?.ToString();
+            textBoxAddress.Text = selectedRow.Cells[3].Value?.ToString();
         }
 
         private async void buttonSearchStudent_Click(object sender, EventArgs e)

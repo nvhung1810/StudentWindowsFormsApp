@@ -103,30 +103,61 @@ namespace StudentWindowsFormsApp.Views
             textBoxGender.Clear();
         }
 
-        private async void buttonDeleteStudent_Click(object sender, EventArgs e)
+        private void textBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            DataGridViewRow selectedRow = dataGridViewStudent.SelectedRows[0];
-            int id = int.Parse(selectedRow.Cells["IdStudent"].Value.ToString());
-
-            Console.Write(id);
-
-            bool res = await studentController.DeleteStudentAsync(id);
-
-            if (res)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-                List<Student> students = await studentController.GetAllStudentAsync();
-                dataGridViewStudent.DataSource = new BindingList<Student>(students);
-                MessageBox.Show("Xóa thông tin sinh viên thành công");
-                ClearInput();
-            }
-            else
-            {
-                MessageBox.Show("Xóa thông tin sinh viên thất bại");
+                e.Handled = true;
             }
         }
 
+        private async void buttonDeleteStudent_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewStudent.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridViewStudent.SelectedRows[0];
+                int id = int.Parse(selectedRow.Cells["IdStudent"].Value.ToString());
+
+                // Show confirmation dialog
+                DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa sinh viên này không?",
+                                                            "Xác nhận xóa",
+                                                            MessageBoxButtons.YesNo,
+                                                            MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    // Proceed with delete if Yes is clicked
+                    bool res = await studentController.DeleteStudentAsync(id);
+
+                    if (res)
+                    {
+                        List<Student> students = await studentController.GetAllStudentAsync();
+                        dataGridViewStudent.DataSource = new BindingList<Student>(students);
+                        MessageBox.Show("Xóa thông tin sinh viên thành công");
+                        ClearInput();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thông tin sinh viên thất bại");
+                    }
+                }
+                // No action needed if No is clicked
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một sinh viên để xóa");
+            }
+        }
+
+
         private async void buttonUpdateStudent_Click(object sender, EventArgs e)
         {
+            if (dataGridViewStudent.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Dữ liệu hiện tại không phù hợp để cập nhật.");
+                return;
+            }
+
             DataGridViewRow selectedRow = dataGridViewStudent.SelectedRows[0];
             string id = selectedRow.Cells["IdStudent"].Value.ToString();
             int idClassSelected = (int)comboBoxClass.SelectedValue;

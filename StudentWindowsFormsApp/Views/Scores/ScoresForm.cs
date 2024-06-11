@@ -82,22 +82,59 @@ namespace StudentWindowsFormsApp.Views.Scores
 
         private async void buttonDelete_Click(object sender, EventArgs e)
         {
-            DataGridViewRow selectedRow = dataGridView.SelectedRows[0];
-            int id = int.Parse(selectedRow.Cells["IdScores"].Value.ToString());
+            // Check if a row is selected
+            if (dataGridView.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView.SelectedRows[0];
+                int id = int.Parse(selectedRow.Cells["IdScores"].Value.ToString());
 
-                bool res = await scoresController.DeleteScore(id);
+                // Show confirmation dialog
+                DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa điểm này không?",
+                                                            "Xác nhận xóa",
+                                                            MessageBoxButtons.YesNo,
+                                                            MessageBoxIcon.Warning);
 
-                if (res)
+                if (dialogResult == DialogResult.Yes)
                 {
-                    LoadData();
-                    MessageBox.Show("Xóa điểm thành công");
-                    ClearInput();
+                    // Proceed with delete if Yes is clicked
+                    bool res = await scoresController.DeleteScore(id);
+
+                    if (res)
+                    {
+                        LoadData();
+                        MessageBox.Show("Xóa điểm thành công");
+                        ClearInput();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa điểm thất bại");
+                    }
                 }
-           
+                // No action needed if No is clicked
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một điểm để xóa");
+            }
+        }
+
+        private void textBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Chỉ cho phép nhập số (0-9) và phím điều khiển
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private async void buttonUpdate_Click(object sender, EventArgs e)
         {
+            if (dataGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Dữ liệu hiện tại không phù hợp để cập nhật.");
+                return;
+            }
+
             DataGridViewRow selectedRow = dataGridView.SelectedRows[0];
             int id = int.Parse(selectedRow.Cells["IdStudent"].Value.ToString());
             int selected = (int)comboBoxStudent.SelectedValue;

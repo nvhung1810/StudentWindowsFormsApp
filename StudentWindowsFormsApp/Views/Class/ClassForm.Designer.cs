@@ -136,6 +136,8 @@
             this.textBoxQuantity.Name = "textBoxQuantity";
             this.textBoxQuantity.Size = new System.Drawing.Size(198, 22);
             this.textBoxQuantity.TabIndex = 56;
+            this.textBoxQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+
             // 
             // label2
             // 

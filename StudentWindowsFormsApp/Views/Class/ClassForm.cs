@@ -75,10 +75,36 @@ namespace StudentWindowsFormsApp.Views.Class
         private async void LoadData()
         {
             List<ClassModel> classList = await classController.GetAll();
-            dataGridView.DataSource = new BindingList<ClassModel>(classList);
-            dataGridView.AutoGenerateColumns = true;
+            var bindingList = new BindingList<ClassModel>(classList);
+            var source = new BindingSource(bindingList, null);
+            dataGridView.AutoGenerateColumns = false;
+            dataGridView.Columns.Clear();
+
+            dataGridView.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "IdClass",
+                HeaderText = "ID Lớp"
+            });
+            dataGridView.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "Name",
+                HeaderText = "Tên Lớp"
+            });
+            dataGridView.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "Quantity",
+                HeaderText = "SLSV"
+            });
+            dataGridView.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "IdFaculty",
+                HeaderText = "Id Khoa"
+            });
+
+            dataGridView.DataSource = source;
             dataGridView.Refresh();
         }
+
 
         private void ClearInput()
         {
@@ -88,30 +114,61 @@ namespace StudentWindowsFormsApp.Views.Class
 
         private async void buttonDelete_Click(object sender, EventArgs e)
         {
-            DataGridViewRow selectedRow = dataGridView.SelectedRows[0];
-            int id = int.Parse(selectedRow.Cells["IdClass"].Value.ToString());
-
-            try
+            // Check if a row is selected
+            if (dataGridView.SelectedRows.Count > 0)
             {
-                bool res = await classController.DeleteClass(id);
+                DataGridViewRow selectedRow = dataGridView.SelectedRows[0];
+                int id = int.Parse(selectedRow.Cells[0].Value.ToString());
 
-                if (res)
+                // Show confirmation dialog
+                DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa lớp này không?",
+                                                            "Xác nhận xóa",
+                                                            MessageBoxButtons.YesNo,
+                                                            MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
                 {
-                    LoadData();
-                    MessageBox.Show("Xóa lớp thành công");
-                    ClearInput();
+                    try
+                    {
+                        // Proceed with delete if Yes is clicked
+                        bool res = await classController.DeleteClass(id);
+
+                        if (res)
+                        {
+                            LoadData();
+                            MessageBox.Show("Xóa lớp thành công");
+                            ClearInput();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Xóa lớp thất bại");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"{ex.Message}");
+                        MessageBox.Show("Đã xảy ra lỗi trong quá trình xóa lớp.");
+                    }
                 }
+                // No action needed if No is clicked
             }
-            catch (Exception ex)
+            else
             {
-                Console.WriteLine($"{ex.Message}");
+                MessageBox.Show("Vui lòng chọn một lớp để xóa");
             }
         }
 
+
         private async void buttonUpdate_Click(object sender, EventArgs e)
         {
+            if (dataGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Dữ liệu hiện tại không phù hợp để cập nhật.");
+                return;
+            }
+
             DataGridViewRow selectedRow = dataGridView.SelectedRows[0];
-            int id = int.Parse(selectedRow.Cells["IdClass"].Value.ToString());
+            int id = int.Parse(selectedRow.Cells[0].Value.ToString());
             int selected = (int)comboBoxFaculty.SelectedValue;
 
             ClassModel classModel = new ClassModel
@@ -150,15 +207,14 @@ namespace StudentWindowsFormsApp.Views.Class
 
         private void FillData(DataGridViewRow selectedRow)
         {
-            textBoxName.Text = selectedRow.Cells["Name"].Value?.ToString();
-            textBoxQuantity.Text = selectedRow.Cells["Quantity"].Value?.ToString();
-            var idFacultyValue = selectedRow.Cells["IdFaculty"].Value;
+            textBoxName.Text = selectedRow.Cells[1].Value?.ToString();
+            textBoxQuantity.Text = selectedRow.Cells[2].Value?.ToString();
+            var idFacultyValue = selectedRow.Cells[3].Value;
 
             if (idFacultyValue != null)
             {
                 comboBoxFaculty.SelectedValue = idFacultyValue;
             }
-            Console.WriteLine(selectedRow.Cells["IdFaculty"].Value?.ToString());
         }
 
         private async void buttonSearchStudent_Click(object sender, EventArgs e)
@@ -200,6 +256,14 @@ namespace StudentWindowsFormsApp.Views.Class
         private void buttonLogout_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
